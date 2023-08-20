@@ -4,7 +4,7 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 app.use(cors());
-const port = 3000;
+const port = 3001;
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -30,6 +30,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(port, "0.0.0.0",() => {
+server.listen(port,() => {
   console.log(`Chat app listening on port ${port}`)
 });
