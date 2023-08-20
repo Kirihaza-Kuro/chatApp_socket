@@ -30,6 +30,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
+server.listen(3001, "127.0.0.1",() => {
   console.log("SERVER RUNNING");
 });
